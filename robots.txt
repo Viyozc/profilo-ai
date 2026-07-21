@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Viyozc.github.io/profilo-ai/sitemap.xml

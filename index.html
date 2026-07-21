@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profilo — Is your freelancer profile ready to get hired? (free profile-readiness audit)</title>
+  <meta name="description" content="Profilo scores your Upwork, Fiverr or Freelancer.com profile like a top-rated client would — title & keywords, positioning, portfolio proof, skills, niche focus, and completeness. Free 0–100 audit, no signup. Find out why you're not getting invites." />
+  <link rel="canonical" href="https://Viyozc.github.io/profilo-ai/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Profilo — Is your freelancer profile ready to get hired? (free profile-readiness audit)" />
+  <meta property="og:description" content="Profilo scores your freelance profile on the six signals that decide invites and wins. Free 0–100 audit, no signup." />
+  <meta property="og:url" content="https://Viyozc.github.io/profilo-ai/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Profilo — Is your freelancer profile ready to get hired? (free profile-readiness audit)" />
+  <meta name="twitter:description" content="Profilo scores your freelance profile on the six signals that decide invites and wins. Free 0–100 audit, no signup." />
+
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Profilo","url":"https://Viyozc.github.io/profilo-ai/","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  </script>
+</head>
+<body>
+  <!-- ===== Nav ===== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Profilo<span class="brand-dot">.</span></a>
+      <nav class="nav-links">
+        <a href="#audit">Free Audit</a>
+        <a href="#how">How it works</a>
+        <a href="#why">Why it matters</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="#audit">Run free audit</a>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="badge">For Upwork, Fiverr &amp; Freelancer.com freelancers</span>
+        <h1>Is your freelancer profile <span class="hl">ready to get hired?</span></h1>
+        <p class="lede">
+          Top freelancers get <strong>invited</strong> to jobs they never applied for. The rest send 15–20 proposals
+          per win and pay <strong>$15–20</strong> in connects for every "yes". Profilo scores your profile on the
+          six signals that decide whether clients dm you — and shows you exactly what to fix first.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#audit">Run a free Profile Audit →</a>
+          <span class="hero-note">No signup required · 60 seconds · 100% free</span>
+        </div>
+        <div class="hero-stats">
+          <div><strong>6</strong><span>signals scored</span></div>
+          <div><strong>0–100</strong><span>readiness score</span></div>
+          <div><strong>$15–20</strong><span>cost per win</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="score-card">
+          <div class="score-ring"><span class="score-num" id="heroScore">—</span><span class="score-grad">/100</span></div>
+          <div class="score-meta">
+            <span class="grade" id="heroGrade">Grade</span>
+            <span class="score-sub">Your profile's readiness</span>
+          </div>
+          <div class="mini-bars">
+            <div class="mbar"><i style="width:65%"></i><span>Title</span></div>
+            <div class="mbar"><i style="width:58%"></i><span>Proof</span></div>
+            <div class="mbar"><i style="width:52%"></i><span>Niche</span></div>
+            <div class="mbar"><i style="width:48%"></i><span>Complete</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Audit Tool ===== -->
+  <section class="audit" id="audit">
+    <div class="container">
+      <div class="section-head">
+        <h2>Free Freelancer Profile Audit</h2>
+        <p>Describe your current profile. We'll score it on the six signals that separate profiles clients invite from profiles they scroll past — and hand you a prioritized fix list. No account, no credit card.</p>
+      </div>
+
+      <div class="audit-grid">
+        <!-- Input -->
+        <form class="audit-form" id="auditForm" novalidate>
+          <label class="field">
+            <span>Which platform is your main profile on?</span>
+            <select id="fPlatform">
+              <option value="upwork">Upwork</option>
+              <option value="fiverr">Fiverr</option>
+              <option value="freelancer">Freelancer.com</option>
+              <option value="toptal">Toptal</option>
+              <option value="other">Other / multiple</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Paste your profile title / headline</span>
+            <textarea id="fTitle" rows="2" placeholder="e.g. I build SaaS MVPs that ship in 2 weeks"></textarea>
+          </label>
+
+          <div class="field-row">
+            <label class="field">
+              <span>Does your title contain buyer-search keywords (not just tool names)?</span>
+              <select id="fKeyword">
+                <option value="yes">Yes — names the outcome buyers search</option>
+                <option value="partial">Sort of / mixed</option>
+                <option value="no">No — just lists tools/skills</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Is your Overview positioned as an expert with a clear outcome?</span>
+              <select id="fPositioning">
+                <option value="yes">Yes — problem → outcome led</option>
+                <option value="partial">Mixed</option>
+                <option value="no">No — reads like a bio / tool list</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Do you show verifiable proof (case studies, screenshots, results)?</span>
+            <select id="fProof">
+              <option value="strong">Yes — real results / numbers</option>
+              <option value="some">A little</option>
+              <option value="none">None yet</option>
+            </select>
+          </label>
+
+          <div class="field-row">
+            <label class="field">
+              <span>Are your skills framed as capability → evidence?</span>
+              <select id="fSkills">
+                <option value="yes">Yes — skill + proof</option>
+                <option value="partial">Mixed</option>
+                <option value="no">No — bare tool list</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Do you focus on one specific niche / outcome?</span>
+              <select id="fNiche">
+                <option value="yes">Yes — one clear outcome</option>
+                <option value="partial">Loosely</option>
+                <option value="no">No — "I do everything"</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Profile completeness &amp; responsiveness (filled sections, reply speed, JSS risk)</span>
+            <select id="fComplete">
+              <option value="high">High — fully filled, fast replies</option>
+              <option value="mid">Mid — some gaps</option>
+              <option value="low">Low — incomplete / slow</option>
+            </select>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Run my free audit →</button>
+          <p class="form-fine">Everything runs in your browser. We never store your title until you ask us to email the report.</p>
+        </form>
+
+        <!-- Result -->
+        <div class="audit-result" id="auditResult" hidden>
+          <div class="result-top">
+            <div class="score-ring lg">
+              <span class="score-num" id="resScore">0</span>
+              <span class="score-grad">/100</span>
+            </div>
+            <div>
+              <span class="grade big" id="resGrade">—</span>
+              <p class="result-sub" id="resSummary">—</p>
+            </div>
+          </div>
+
+          <div class="bars" id="resBars"></div>
+
+          <div class="tips">
+            <h3>What to fix first</h3>
+            <ul id="resTips"></ul>
+          </div>
+
+          <form class="email-capture" id="emailForm" action="https://formspree.io/f/meeyzkdp" method="POST">
+            <label for="fEmail">Get the full report + weekly profile-growth tips by email</label>
+            <div class="email-row">
+              <input type="email" id="fEmail" name="email" placeholder="you@email.com" required />
+              <button type="submit" class="btn btn-primary">Email my report</button>
+            </div>
+            <p class="form-fine" id="emailNote">No spam. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How it works ===== -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-head">
+        <h2>How Profilo works</h2>
+        <p>Three steps from a profile clients scroll past to a profile clients invite.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Audit</h3>
+          <p>Paste a few details about your profile. Profilo scores the six signals that decide invites — not vanity metrics.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Improve</h3>
+          <p>Get a prioritized fix list — the exact title, overview, proof, and niche changes that move the needle.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Win</h3>
+          <p>Apply the changes, watch invites climb, and reuse the playbook across every platform you're on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why ===== -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="section-head">
+        <h2>Why freelance profiles are a power-law game</h2>
+        <p>The skills are rarely the problem. The profile is.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>Invites beat proposals</h3>
+          <p>Top freelancers get invited to jobs they never applied for. Invited work converts better and costs zero connects. A strong profile is the lever that flips you from "applier" to "invited".</p>
+        </div>
+        <div class="why-card">
+          <h3>Outcome beats tools</h3>
+          <p>"I build SaaS MVPs that ship in 2 weeks" outsells "React Developer" every time. A title with the buyer's outcome is the single highest-leverage fix on your profile.</p>
+        </div>
+        <div class="why-card">
+          <h3>Proof kills doubt</h3>
+          <p>Profiles with real results and case studies win the invite. Specificity (one named win with numbers) beats a wall of vague past projects.</p>
+        </div>
+        <div class="why-card">
+          <h3>Specialists out-earn generalists</h3>
+          <p>Clients pay more for a named result ("Shopify migration") than a generalist ("web dev"). One sharp niche beats a broad menu that signals "I'll take anything".</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Is the audit really free?</summary>
+          <p>Yes. The on-page audit runs entirely in your browser and costs nothing. No account needed.</p>
+        </details>
+        <details>
+          <summary>Do I need to connect my freelance account?</summary>
+          <p>No. You describe your setup with a few clicks and paste your title. Profilo scores the strategy, not your private client data — so it works before you've optimized anything.</p>
+        </details>
+        <details>
+          <summary>How is the score calculated?</summary>
+          <p>We weight title &amp; keywords, positioning / overview, portfolio proof, skills framing, niche focus, and profile completeness &amp; responsiveness — the signals that decide whether a stranger invites you or scrolls past.</p>
+        </details>
+        <details>
+          <summary>Will this guarantee I get hired?</summary>
+          <p>No tool can. But most of the gap between a profile that sits and one that gets invited is operational — title, overview, proof, niche. Profilo shows you exactly where your gaps are.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="#top">Profilo<span class="brand-dot">.</span></a>
+        <p class="footer-sub">Profile-readiness audits for freelancers on Upwork, Fiverr &amp; Freelancer.com. AI-assisted, human-approved.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:13px;margin-top:10px;">
+        <span style="color:var(--muted);font-weight:600;">More free audit tools:</span>
+        <a href="https://Viyozc.github.io/listora/" style="color:var(--brand-dk);font-weight:600;">Listora</a><a href="https://Viyozc.github.io/booklisting-ai/" style="color:var(--brand-dk);font-weight:600;">BookListing</a><a href="https://Viyozc.github.io/mockly-ai/" style="color:var(--brand-dk);font-weight:600;">Mockly</a><a href="https://Viyozc.github.io/newsletterly-ai/" style="color:var(--brand-dk);font-weight:600;">Newsletterly</a><a href="https://Viyozc.github.io/launchly-ai/" style="color:var(--brand-dk);font-weight:600;">Launchly</a><a href="https://Viyozc.github.io/profilo-ai/" style="color:var(--brand-dk);font-weight:600;">Profilo</a>
+      </div>
+      <p class="footer-fine">Profilo is an independent tool and is not affiliated with Upwork, Fiverr, or Freelancer.com. Trademarks belong to their owners.</p>
+    </div>
+  </footer>
+
+  <script src="assets/audit.js"></script>
+</body>
+</html>
