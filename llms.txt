@@ -1,0 +1,19 @@
+# Profilo
+
+> Profilo scores your Upwork, Fiverr or Freelancer.com profile like a top-rated client would — title & keywords, positioning, portfolio proof, skills, niche focus, and completeness. Free 0–100 audit, no signup. Find out why you're not getting invites.
+
+Canonical host: https://profilo.aiyes.space
+
+## Core pages
+
+- [Home](https://profilo.aiyes.space/)
+
+## Blog
+
+- [Freelance Profile Optimization: Win More Upwork & Fiverr Proposals](https://profilo.aiyes.space/blog/)
+- [Upwork Profile Examples: 5 That Win the Job](https://profilo.aiyes.space/blog/upwork-profile-examples/)
+
+## Canonical discovery
+
+- [Sitemap](https://profilo.aiyes.space/sitemap.xml)
+- [Robots](https://profilo.aiyes.space/robots.txt)
